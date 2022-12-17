@@ -1,0 +1,53 @@
+require:
+  - standard
+  - rubocop-rails
+  - rubocop-rspec
+
+inherit_gem:
+  standard: config/base.yml
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+  Exclude:
+    - node_modules/**/*
+    - public/**/*
+    - vendor/**/*
+    - db/schema.rb
+
+Rails:
+  Enabled: true
+
+RSpec:
+  Enabled: true
+
+RSpec/DescribeClass:
+  Enabled: false
+
+Bundler/DuplicatedGem:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+
+Rails/AttributeDefaultBlockValue:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Exclude:
+    - lib/tasks/fly.rake
