@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "misogi.ruby-rubocop",
+    "rebornix.ruby",
+    "wingrunr21.vscode-ruby",
+    "castwide.solargraph",
+    "EditorConfig.EditorConfig"
+  ]
+}

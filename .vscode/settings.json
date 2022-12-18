@@ -1,0 +1,14 @@
+{
+  "solargraph.useBundler": true,
+  "ruby.format": false,
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": false,
+    "reek": false
+  },
+  "[ruby]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  }
+}
