@@ -1,0 +1,18 @@
+PreCommit:
+  RuboCop:
+    enabled: true
+    on_warn: fail
+    command: ["bundle", "exec", "rubocop"]
+
+  Reek:
+    enabled: true
+    command: ["bundle", "exec", "reek"]
+
+CommitMsg:
+  ALL:
+    enabled: false
+
+PrePush:
+  Brakeman:
+    enabled: true
+    command: ["bundle", "exec", "brakeman"]

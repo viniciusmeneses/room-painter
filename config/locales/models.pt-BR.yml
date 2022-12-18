@@ -1,0 +1,50 @@
+pt-BR:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "A validação falhou: %{errors}"
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: deve ser aceito
+      blank: deve ser informado
+      confirmation: deve ser igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: deve estar disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: deve estar incluído na lista
+      invalid: deve ser válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      model_invalid: "A validação falhou: %{errors}"
+      not_a_number: deve ser um número
+      not_an_integer: deve ser um número inteiro
+      odd: deve ser ímpar
+      other_than: deve ser diferente de %{count}
+      present: deve ficar em branco
+      required: deve ser informado
+      taken: já está em uso
+      too_long:
+        one: "deve conter até 1 caractere"
+        other: "deve conter até %{count} caracteres"
+      too_short:
+        one: "deve conter ao menos 1 caractere"
+        other: "deve conter ao menos %{count} caracteres"
+      wrong_length:
+        one: "deve conter 1 caractere"
+        other: "deve conter %{count} caracteres"
+    template:
+      body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      header:
+        one: "Não foi possível gravar %{model}: 1 erro"
+        other: "Não foi possível gravar %{model}: %{count} erros"
+    attributes:
+      user/password:
+        invalid: "deve conter ao menos uma letra minúscula, uma letra minúscula, um número e um símbolo"
