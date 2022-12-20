@@ -1,6 +1,8 @@
 detectors:
   IrresponsibleModule:
     enabled: false
+  Attribute:
+    enabled: false
 
 directories:
   app/controllers:
