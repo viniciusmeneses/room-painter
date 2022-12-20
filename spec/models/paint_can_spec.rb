@@ -1,16 +1,23 @@
 require "rails_helper"
 
 RSpec.describe PaintCan, type: :model do
+  context "with correct attributes" do
+    it "is valid" do
+      paint_can = build(:paint_can)
+      expect(paint_can).to be_valid
+    end
+  end
+
   describe "#size" do
     context "when is blank" do
-      it "is not valid" do
+      it "is invalid" do
         paint_can = build(:paint_can, size: nil)
         expect(paint_can).to be_invalid
       end
     end
 
     context "when is not greater than 0" do
-      it "is not valid" do
+      it "is invalid" do
         paint_can = build(:paint_can, size: 0)
         expect(paint_can).to be_invalid
       end
@@ -19,14 +26,14 @@ RSpec.describe PaintCan, type: :model do
 
   describe "#area_per_liter" do
     context "when is blank" do
-      it "is not valid" do
+      it "is invalid" do
         paint_can = build(:paint_can, area_per_liter: nil)
         expect(paint_can).to be_invalid
       end
     end
 
     context "when is not greater than 0" do
-      it "is not valid" do
+      it "is invalid" do
         paint_can = build(:paint_can, area_per_liter: 0)
         expect(paint_can).to be_invalid
       end
