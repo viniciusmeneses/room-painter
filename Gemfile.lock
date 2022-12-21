@@ -94,6 +94,32 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
+    dry-configurable (1.0.1)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-core (1.0.0)
+      concurrent-ruby (~> 1.0)
+      zeitwerk (~> 2.6)
+    dry-inflector (1.0.0)
+    dry-initializer (3.1.1)
+    dry-logic (1.5.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-schema (1.13.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-logic (>= 1.5, < 2)
+      dry-types (>= 1.7, < 2)
+      zeitwerk (~> 2.6)
+    dry-types (1.7.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      dry-inflector (~> 1.0, < 2)
+      dry-logic (>= 1.4, < 2)
+      zeitwerk (~> 2.6)
     e2mmap (0.1.0)
     equalizer (0.0.11)
     erubi (1.11.0)
@@ -119,6 +145,7 @@ GEM
     iniparse (1.5.0)
     jaro_winkler (1.5.4)
     json (2.6.2)
+    kind (5.10.0)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -295,6 +322,11 @@ GEM
     tty-which (0.4.2)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    u-attributes (2.8.0)
+      kind (>= 4.0, < 6.0)
+    u-case (4.5.2)
+      kind (>= 5.6, < 6.0)
+      u-attributes (>= 2.7, < 3.0)
     unicode-display_width (2.3.0)
     virtus (1.0.5)
       axiom-types (~> 0.1)
@@ -316,6 +348,7 @@ DEPENDENCIES
   bootsnap
   brakeman
   dotenv-rails
+  dry-schema
   factory_bot_rails
   overcommit
   puma (~> 6.0)
@@ -332,6 +365,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   standard
   tzinfo-data
+  u-case
 
 RUBY VERSION
    ruby 3.1.2p20
