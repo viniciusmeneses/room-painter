@@ -48,7 +48,7 @@ module Rooms
     end
 
     def validate_walls!(walls)
-      return if walls.map(&:valid?).any?
+      return if walls.map(&:valid?).all?
 
       messages = walls.map { |wall| wall.errors.messages }
       messages_by_index = messages.index_by.with_index { |_, index| index }.select { |_, messages| messages.any? }
