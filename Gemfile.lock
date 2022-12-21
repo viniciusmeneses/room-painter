@@ -83,12 +83,43 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.1.10)
+    connection_pool (2.3.0)
     crass (1.0.6)
     date (3.3.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
+    dry-configurable (1.0.1)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-core (1.0.0)
+      concurrent-ruby (~> 1.0)
+      zeitwerk (~> 2.6)
+    dry-inflector (1.0.0)
+    dry-initializer (3.1.1)
+    dry-logic (1.5.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      zeitwerk (~> 2.6)
+    dry-schema (1.13.0)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-core (~> 1.0, < 2)
+      dry-initializer (~> 3.0)
+      dry-logic (>= 1.5, < 2)
+      dry-types (>= 1.7, < 2)
+      zeitwerk (~> 2.6)
+    dry-types (1.7.0)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.0, < 2)
+      dry-inflector (~> 1.0, < 2)
+      dry-logic (>= 1.4, < 2)
+      zeitwerk (~> 2.6)
     e2mmap (0.1.0)
     equalizer (0.0.11)
     erubi (1.11.0)
@@ -114,6 +145,7 @@ GEM
     iniparse (1.5.0)
     jaro_winkler (1.5.4)
     json (2.6.2)
+    kind (5.10.0)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -159,6 +191,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.1)
     rack (2.2.4)
+    rack-attack (6.6.1)
+      rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-test (2.0.2)
@@ -191,6 +225,10 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    redis (5.0.5)
+      redis-client (>= 0.9.0)
+    redis-client (0.11.2)
+      connection_pool
     reek (6.1.1)
       kwalify (~> 0.7.0)
       parser (~> 3.1.0)
@@ -252,8 +290,6 @@ GEM
       tty-which (~> 0.4.0)
       virtus (~> 1.0)
     sexp_processor (4.16.1)
-    shoulda-matchers (5.2.0)
-      activesupport (>= 5.2.0)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -286,6 +322,11 @@ GEM
     tty-which (0.4.2)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    u-attributes (2.8.0)
+      kind (>= 4.0, < 6.0)
+    u-case (4.5.2)
+      kind (>= 5.6, < 6.0)
+      u-attributes (>= 2.7, < 3.0)
     unicode-display_width (2.3.0)
     virtus (1.0.5)
       axiom-types (~> 0.1)
@@ -306,21 +347,25 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  dotenv-rails
+  dry-schema
   factory_bot_rails
   overcommit
   puma (~> 6.0)
+  rack-attack
   rack-cors
   rails (~> 7.0.4)
+  redis
   rspec-rails
   rubocop-rails
   rubocop-rspec
   rubycritic
-  shoulda-matchers (~> 5.2)
   simplecov
   solargraph
   sqlite3 (~> 1.4)
   standard
   tzinfo-data
+  u-case
 
 RUBY VERSION
    ruby 3.1.2p20

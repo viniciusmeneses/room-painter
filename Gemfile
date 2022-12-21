@@ -16,7 +16,7 @@ gem "puma", "~> 6.0"
 # gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -35,6 +35,15 @@ gem "bootsnap", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
+
+# Use cases
+gem "u-case"
+
+# Validations
+gem "dry-schema"
+
+# Simple rate limiter
+gem "rack-attack"
 
 group :development do
   # Language Server
@@ -56,6 +65,10 @@ end
 group :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
-  gem "shoulda-matchers", "~> 5.2"
   gem "simplecov", require: false
+end
+
+group :development, :test do
+  # Load .env files
+  gem "dotenv-rails"
 end
