@@ -83,12 +83,17 @@ GEM
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     concurrent-ruby (1.1.10)
+    connection_pool (2.3.0)
     crass (1.0.6)
     date (3.3.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     e2mmap (0.1.0)
     equalizer (0.0.11)
     erubi (1.11.0)
@@ -191,6 +196,10 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    redis (5.0.5)
+      redis-client (>= 0.9.0)
+    redis-client (0.11.2)
+      connection_pool
     reek (6.1.1)
       kwalify (~> 0.7.0)
       parser (~> 3.1.0)
@@ -306,11 +315,13 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  dotenv-rails
   factory_bot_rails
   overcommit
   puma (~> 6.0)
   rack-cors
   rails (~> 7.0.4)
+  redis
   rspec-rails
   rubocop-rails
   rubocop-rspec
