@@ -288,8 +288,6 @@ GEM
       tty-which (~> 0.4.0)
       virtus (~> 1.0)
     sexp_processor (4.16.1)
-    shoulda-matchers (5.2.0)
-      activesupport (>= 5.2.0)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -359,7 +357,6 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   rubycritic
-  shoulda-matchers (~> 5.2)
   simplecov
   solargraph
   sqlite3 (~> 1.4)
