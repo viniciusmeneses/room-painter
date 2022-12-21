@@ -32,7 +32,6 @@ RSpec.describe Rooms::BuildUseCase, type: :use_case do
         result = described_class.call(walls: [{ width: 1, height: 1, doors: 0, windows: 0 }])
 
         expect(result).to be_failure
-        expect(result.type).to eq(:invalid_room)
         expect(result[:walls]).to include("size must be 4")
       end
     end
@@ -43,7 +42,6 @@ RSpec.describe Rooms::BuildUseCase, type: :use_case do
         result = described_class.call(walls: [wall, wall, wall, wall])
 
         expect(result).to be_failure
-        expect(result.type).to eq(:invalid_walls)
         expect(result[:walls]).to include(
           0 => { area: ["must be in 1..50"] },
           1 => { area: ["must be in 1..50"] },

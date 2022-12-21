@@ -1,6 +1,31 @@
 require "rails_helper"
 
 RSpec.describe Rooms::PaintUseCase, type: :use_case do
+  describe "failure" do
+    context "with invalid attributes" do
+      context "when room is blank" do
+        it "returns a failure" do
+          result = described_class.call
+
+          expect(result).to be_failure
+          expect(result[:room]).to include("must be filled")
+        end
+      end
+
+      context "when paint can has missing param" do
+        it "returns a failure" do
+          result = described_class.call(paint_cans: [{}])
+
+          expect(result).to be_failure
+          expect(result[:paint_cans][0]).to include(
+            size: ["is missing"],
+            area_per_liter: ["is missing"]
+          )
+        end
+      end
+    end
+  end
+
   describe "success" do
     it "returns the painted area" do
       wall = build(:room_wall, width: 4.25, height: 8)
