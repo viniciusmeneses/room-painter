@@ -42,6 +42,9 @@ gem "u-case"
 # Validations
 gem "dry-schema"
 
+# Simple rate limiter
+gem "rack-attack"
+
 group :development do
   # Language Server
   gem "solargraph"
