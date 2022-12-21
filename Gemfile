@@ -36,6 +36,9 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
 
+# Simple rate limiter
+gem "rack-attack"
+
 group :development do
   # Language Server
   gem "solargraph"
