@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Rooms::BuildUseCase, type: :use_case do
+RSpec.describe Room::Build, type: :use_case do
   describe "failure" do
     context "with invalid attributes" do
       context "when walls is not an array" do
